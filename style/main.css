@@ -1,0 +1,215 @@
+body {
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #8affda, #9affdd, #a8ffe0, #b5ffe3, #c2ffe7, #c6fff1, #cdfffa, #d6ffff, #e2feff, #effdff, #fafdff, #ffffff);
+    background-size: auto;
+    font-size: 24px;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+}
+
+#column1 {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section1 {
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cardimage1 {
+    width: 100%;
+    height: 20vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#section2 {
+    background: none;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+#cardimage2 {
+    width: 35vh;
+    height: 40vh;
+    margin: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+#column2 {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section3 {
+    background: none;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+#cardimage3 {
+    width: 35vh;
+    height: 23vh;
+    margin: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 40px;
+}
+
+#section4 {
+    margin-top: 5vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    visibility: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+#column3 {
+    flex: 2;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section5 {
+    margin-top: 5vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    border-radius: 5px;
+    visibility: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+#section6 {
+    margin-top: 5vh;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    font-family: 'Charmonman', cursive;
+    font-size: 40px;
+    visibility: hidden;
+}
+
+.namebox {
+    /* open this after done */
+    /* visibility: collapse; */
+    /* to this */
+    width: 75vh;
+    height: 50vh;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 20px 20px;
+    /* border: solid 1px #9a999c; */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(198, 255, 251);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameintro {
+    width: fit-content;
+    margin: 5px
+}
+
+.namebar {
+    min-height: 70px;
+    width: 80%;
+    margin: 15px;
+    background: white;
+    display: block;
+    padding: 10px 70px 10px 32px;
+    font-size: 18px;
+    color: #666;
+    border-radius: 34px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nameinput {
+    vertical-align: baseline;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 4px 0 4px 2px;
+    font-size: 16px;
+}
+
+.nameinput:focus {
+    outline: none;
+}
+
+.namebutton {
+    background-color: white;
+    margin: 15px;
+    border: none;
+    color: black;
+    padding: 5px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 60px 60px;
+    font-size: 16px;
+}
+
+.namebutton:hover {
+    background-color: rgb(255, 220, 246);
+    transition: 0.5s;
+    box-shadow: 0;
+}
