@@ -1,12 +1,19 @@
+/* * {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+} */
+
 body {
     max-width: 100%;
     height: 100vh;
     margin: 0 auto;
-    background: linear-gradient(to bottom, #8affda, #9affdd, #a8ffe0, #b5ffe3, #c2ffe7, #c6fff1, #cdfffa, #d6ffff, #e2feff, #effdff, #fafdff, #ffffff);
+    /* background: linear-gradient(to bottom, #8affda, #9affdd, #a8ffe0, #b5ffe3, #c2ffe7, #c6fff1, #cdfffa, #d6ffff, #e2feff, #effdff, #fafdff, #ffffff); */
+    background: linear-gradient(to bottom, #fe88da, #fd8fdd, #fc96e0, #fb9de3, #faa3e6, #faabe9, #fbb2eb, #fbbaee, #fcc5f2, #fdd0f5, #fedaf8, #ffe5fb);
     background-size: auto;
-    font-size: 24px;
     overflow: hidden;
     font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -50,6 +57,7 @@ div {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border-radius: 5px;
 }
 
 #section2 {
@@ -90,14 +98,14 @@ div {
 }
 
 #cardimage3 {
-    width: 35vh;
-    height: 23vh;
+    width: 45vh;
+    height: 20vh;
     margin: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 
 #section4 {
@@ -144,9 +152,9 @@ div {
     /* open this after done */
     /* visibility: collapse; */
     /* to this */
-    width: 75vh;
-    height: 50vh;
-    position: fixed;
+    width: 540px;
+    height: 380px;
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -154,16 +162,92 @@ div {
     border-radius: 20px 20px;
     /* border: solid 1px #9a999c; */
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(198, 255, 251);
+    /* background-color: rgb(198, 255, 251); */
+    background-color: #ffe3fb;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: heading;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0% {
+        top: -50px
+    }
+    50% {
+        top: 54%
+    }
+    75% {
+        top: 48%
+    }
+    100% {
+        top: 50%
+    }
+}
+
+.disappearclass {
+    animation-name: disappear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes disappear {
+    0% {
+        top: 50%;
+        opacity: 1;
+    }
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+.appearclass {
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.handwrite {
+    animation-name: handwrite;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes handwrite {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .nameintro {
     width: fit-content;
-    margin: 5px
 }
 
 .namebar {
@@ -178,6 +262,11 @@ div {
     border-radius: 34px;
     display: flex;
     flex-wrap: wrap;
+}
+
+input[type="text"] {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
 }
 
 .nameinput {
@@ -197,6 +286,7 @@ div {
 .namebutton {
     background-color: white;
     margin: 15px;
+    width: 50%;
     border: none;
     color: black;
     padding: 5px 64px;
@@ -206,10 +296,12 @@ div {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
     border-radius: 60px 60px;
     font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .namebutton:hover {
-    background-color: rgb(255, 220, 246);
-    transition: 0.5s;
+    background-color: rgb(255, 249, 254);
+    width: 60%;
     box-shadow: 0;
 }
